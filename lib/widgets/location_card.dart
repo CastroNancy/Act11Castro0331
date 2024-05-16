@@ -21,14 +21,14 @@ class LocationCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  "Your Location",
+                  "Encuentra tu oxxo",
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: Theme.of(context).primaryColor,
+                        color: Color(0xFF800020), // Color guinda rojizo
                       ),
                 ),
                 const SizedBox(height: 5),
                 Text(
-                  "United States, New York",
+                  "A la vuelta de tu vida",
                   style: Theme.of(context).textTheme.labelLarge,
                 )
               ],

@@ -51,7 +51,7 @@ class RecommendedPlaces extends StatelessWidget {
                         Row(
                           children: [
                             const Text(
-                              "St Regis Bora Bora",
+                              "Sucursal oxxo",
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,
@@ -64,7 +64,7 @@ class RecommendedPlaces extends StatelessWidget {
                               size: 14,
                             ),
                             const Text(
-                              "4.4",
+                              "4.9",
                               style: TextStyle(
                                 fontSize: 12,
                               ),
@@ -81,7 +81,7 @@ class RecommendedPlaces extends StatelessWidget {
                             ),
                             const SizedBox(width: 5),
                             const Text(
-                              "French Polynesia",
+                              "Oxxo...Cd Juarez",
                               style: TextStyle(
                                 fontSize: 12,
                               ),

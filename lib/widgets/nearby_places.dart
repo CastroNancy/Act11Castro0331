@@ -50,13 +50,13 @@ class NearbyPlaces extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             const Text(
-                              "Sea of Peace",
+                              "Sucursal oxxo",
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
                               ),
                             ),
-                            const Text("Portic Team"),
+                            const Text("cd Juarez Chihuahua"),
                             const SizedBox(height: 10),
                             // DISTANCE WIDGET
                             const Distance(),
@@ -65,11 +65,11 @@ class NearbyPlaces extends StatelessWidget {
                               children: [
                                 Icon(
                                   Icons.star,
-                                  color: Colors.yellow.shade700,
+                                  color: Color(0xfffffc00), // Guinda rojizo
                                   size: 14,
                                 ),
                                 const Text(
-                                  "4.5",
+                                  "4.8",
                                   style: TextStyle(
                                     fontSize: 12,
                                   ),
@@ -79,16 +79,16 @@ class NearbyPlaces extends StatelessWidget {
                                   text: TextSpan(
                                       style: TextStyle(
                                         fontSize: 20,
-                                        color: Theme.of(context).primaryColor,
+                                        color: Color(0xff850f07),
                                       ),
-                                      text: "\$22",
+                                      text: "\200",
                                       children: const [
                                         TextSpan(
                                             style: TextStyle(
                                               fontSize: 12,
                                               color: Colors.black54,
                                             ),
-                                            text: "/ Person")
+                                            text: "/ Personas")
                                       ]),
                                 )
                               ],

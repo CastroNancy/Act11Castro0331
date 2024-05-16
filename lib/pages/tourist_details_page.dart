@@ -1,7 +1,6 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 import 'package:ionicons/ionicons.dart';
-import 'package:castro0331/widgets/distance.dart';
+import 'package:castro0331/widgets/distance.dart'; // Asegúrate de tener este widget
 
 class TouristDetailsPage extends StatelessWidget {
   const TouristDetailsPage({
@@ -9,6 +8,7 @@ class TouristDetailsPage extends StatelessWidget {
     required this.image,
   }) : super(key: key);
   final String image;
+
   @override
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
@@ -67,7 +67,7 @@ class TouristDetailsPage extends StatelessWidget {
                         ],
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
@@ -79,14 +79,20 @@ class TouristDetailsPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "Sea of Peace",
-                      style: Theme.of(context).textTheme.titleLarge,
+                      "Sucursal Zaragoza",
+                      style: Theme.of(context).textTheme.headline5?.copyWith(
+                            color: const Color(
+                                0xFFB71C1C), // Tono de rojo elegante
+                            fontWeight: FontWeight.bold,
+                          ),
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      "Portic Team 8km",
-                      style: Theme.of(context).textTheme.bodySmall,
-                    )
+                      "A tan solo 5km de tu casa",
+                      style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                            color: Colors.grey[700],
+                          ),
+                    ),
                   ],
                 ),
                 const Spacer(),
@@ -96,6 +102,7 @@ class TouristDetailsPage extends StatelessWidget {
                     onPressed: () {},
                     iconSize: 20,
                     icon: const Icon(Ionicons.chatbubble_ellipses_outline),
+                    color: const Color(0xFFB71C1C), // Rojo elegante
                   ),
                 ),
                 Column(
@@ -103,37 +110,37 @@ class TouristDetailsPage extends StatelessWidget {
                   children: [
                     Text(
                       "4.6",
-                      style: Theme.of(context).textTheme.bodySmall,
+                      style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                            color: Colors.grey[700],
+                          ),
                     ),
                     Icon(
                       Ionicons.star,
                       color: Colors.yellow[800],
                       size: 15,
-                    )
+                    ),
                   ],
-                )
+                ),
               ],
             ),
             const SizedBox(height: 15),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
               children: [
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Text(
-                      "01d:32h:56m",
-                      style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                            color: Theme.of(context).colorScheme.primary,
-                          ),
-                    ),
-                    const SizedBox(height: 5),
-                    Text(
-                      "Started in",
-                      style: Theme.of(context).textTheme.bodySmall,
-                    )
-                  ],
+                Text(
+                  "Blvd. Zaragoza 8050, 32690 Juárez, Chih.",
+                  style: Theme.of(context).textTheme.headline5?.copyWith(
+                        color: const Color(0xFFB71C1C), // Rojo elegante
+                        fontSize: 15, // Tamaño de fuente aumentado a 24
+                      ),
+                ),
+                const SizedBox(height: 5),
+                Text(
+                  "Abierto de 7 a.m.-11 p.m.",
+                  style: Theme.of(context).textTheme.bodyText2?.copyWith(
+                        color: Colors.grey[700],
+                      ),
                 ),
               ],
             ),
@@ -156,15 +163,23 @@ class TouristDetailsPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () {},
               style: ElevatedButton.styleFrom(
-                elevation: 0,
+                primary: const Color(0xFFC62828), // Rojo oscuro elegante
+                elevation: 5,
                 shape: const StadiumBorder(),
                 padding: const EdgeInsets.symmetric(
                   vertical: 15,
                   horizontal: 8.0,
                 ),
               ),
-              child: const Text("Join this tour"),
-            )
+              child: const Text(
+                "Ver más",
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 16,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
           ],
         ),
       ),

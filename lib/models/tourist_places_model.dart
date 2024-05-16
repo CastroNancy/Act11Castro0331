@@ -9,9 +9,9 @@ class TouristPlacesModel {
 }
 
 List<TouristPlacesModel> touristPlaces = [
-  TouristPlacesModel(name: "Mountain", image: "assets/icons/mountain.png"),
-  TouristPlacesModel(name: "Beach", image: "assets/icons/beach.png"),
-  TouristPlacesModel(name: "Forest", image: "assets/icons/forest.png"),
-  TouristPlacesModel(name: "City", image: "assets/icons/city.png"),
-  TouristPlacesModel(name: "Desert", image: "assets/icons/desert.png"),
+  TouristPlacesModel(name: "Ciel", image: "assets/icons/mountain.png"),
+  TouristPlacesModel(name: "Ricolino", image: "assets/icons/beach.png"),
+  TouristPlacesModel(name: "Gamesa", image: "assets/icons/forest.png"),
+  TouristPlacesModel(name: "Sabritas", image: "assets/icons/city.png"),
+  TouristPlacesModel(name: "Barcel", image: "assets/icons/desert.png"),
 ];

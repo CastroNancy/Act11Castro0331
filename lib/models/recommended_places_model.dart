@@ -14,26 +14,26 @@ List<RecommendedPlaceModel> recommendedPlaces = [
   RecommendedPlaceModel(
     image: "assets/places/place5.jpg",
     rating: 4.4,
-    location: "St. Regis Bora Bora",
+    location: "Oxxo Rufino tamayo",
   ),
-    RecommendedPlaceModel(
+  RecommendedPlaceModel(
     image: "assets/places/place4.jpg",
     rating: 4.4,
-    location: "St. Regis Bora Bora",
+    location: "Oxxo miguel de la madrid",
   ),
   RecommendedPlaceModel(
     image: "assets/places/place3.jpg",
     rating: 4.4,
-    location: "St. Regis Bora Bora",
+    location: "Oxxo Lucero",
   ),
   RecommendedPlaceModel(
     image: "assets/places/place2.jpg",
     rating: 4.4,
-    location: "St. Regis Bora Bora",
+    location: "Oxxo Humariza",
   ),
   RecommendedPlaceModel(
     image: "assets/places/place1.jpg",
     rating: 4.4,
-    location: "St. Regis Bora Bora",
+    location: "Oxxo Yepomera",
   ),
 ];

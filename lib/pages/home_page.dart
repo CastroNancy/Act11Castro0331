@@ -14,68 +14,57 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.black,
+        backgroundColor: Colors.red.shade700, // Fondo rojo guinda
         title: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text("Good Morning"),
+            const Text(
+              "¡Bienvenido!",
+              style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold),
+            ),
             Text(
-              "Tetteh Jeron Asiedu",
-              style: Theme.of(context).textTheme.labelMedium,
+              "Oxxo web",
+              style: Theme.of(context).textTheme.headline6!.copyWith(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                  ),
             ),
           ],
         ),
         actions: const [
           CustomIconButton(
-            icon: Icon(Ionicons.search_outline),
+            icon: Icon(Ionicons.search_outline,
+                color: Colors.white), // Icono blanco
           ),
           Padding(
             padding: EdgeInsets.only(left: 8.0, right: 12),
             child: CustomIconButton(
-              icon: Icon(Ionicons.notifications_outline),
+              icon: Icon(Ionicons.notifications_outline,
+                  color: Colors.white), // Icono blanco
             ),
           ),
         ],
       ),
-      body: ListView(
+      body: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         padding: const EdgeInsets.all(14),
-        children: [
-          // LOCATION CARD
-          const LocationCard(),
-          const SizedBox(
-            height: 15,
-          ),
-          const TouristPlaces(),
-          // CATEGORIES
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Recommendation",
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              TextButton(onPressed: () {}, child: const Text("View All"))
-            ],
-          ),
-          const SizedBox(height: 10),
-          const RecommendedPlaces(),
-          const SizedBox(height: 10),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                "Nearby From You",
-                style: Theme.of(context).textTheme.titleLarge,
-              ),
-              TextButton(onPressed: () {}, child: const Text("View All"))
-            ],
-          ),
-          const SizedBox(height: 10),
-          const NearbyPlaces(),
-        ],
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const LocationCard(),
+            const SizedBox(height: 15),
+            const TouristPlaces(),
+            const SizedBox(height: 20),
+            _buildSectionTitle(context, "Recomendaciones"),
+            const RecommendedPlaces(),
+            const SizedBox(height: 20),
+            _buildSectionTitle(context, "Cerca de ti"),
+            const NearbyPlaces(),
+          ],
+        ),
       ),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
@@ -83,21 +72,55 @@ class HomePage extends StatelessWidget {
         showUnselectedLabels: false,
         items: const [
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.home_outline),
-            label: "Home",
+            icon: Icon(Ionicons.home_outline,
+                color: Color(0xff6c1b15)), // Icono blanco
+            label: "Inicio",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.bookmark_outline),
-            label: "Bookmark",
+            icon: Icon(Ionicons.bookmark_outline,
+                color: Color(0xff6c1b15)), // Icono blanco
+            label: "Favoritos",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.ticket_outline),
-            label: "Ticket",
+            icon: Icon(Ionicons.home_outline,
+                color: Color(0xff6c1b15)), // Icono blanco
+            label: "Productos",
           ),
           BottomNavigationBarItem(
-            icon: Icon(Ionicons.person_outline),
-            label: "Profile",
+            icon: Icon(Ionicons.person_outline,
+                color: Color(0xff6c1b15)), // Icono blanco
+            label: "Perfil",
           )
+        ],
+      ),
+    );
+  }
+
+  Widget _buildSectionTitle(BuildContext context, String title) {
+    return Padding(
+      padding: const EdgeInsets.only(bottom: 8),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title,
+            style: Theme.of(context).textTheme.headline6!.copyWith(
+                  color: Colors.red.shade700, // Rojo guinda
+                  fontSize: 22,
+                  fontWeight: FontWeight.bold,
+                ),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text(
+              "Ver todo",
+              style: TextStyle(
+                color: Color(0xffab1409), // Rojo guinda
+                fontSize: 16,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
         ],
       ),
     );

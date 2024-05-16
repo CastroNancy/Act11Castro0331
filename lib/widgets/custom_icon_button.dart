@@ -7,6 +7,7 @@ class CustomIconButton extends StatelessWidget {
     required this.icon,
   }) : super(key: key);
   final Widget icon;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -17,7 +18,7 @@ class CustomIconButton extends StatelessWidget {
       child: IconButton(
         onPressed: () {},
         constraints: const BoxConstraints.tightFor(width: 40),
-        color: Colors.black54,
+        color: Color(0xFF800020), // Guinda rojizo
         icon: icon,
         splashRadius: 22,
       ),

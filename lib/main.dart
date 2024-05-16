@@ -1,24 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:castro0331/pages/welcome_page.dart.dart';
+import 'package:castro0331/pages/welcome_page.dart';
 
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key? key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Travel App',
+      title: 'Oxxo web',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
-        textTheme: GoogleFonts.mulishTextTheme(
-          Theme.of(context).textTheme,
-        ),
+        primarySwatch: Colors.red,
       ),
       home: const WelcomePage(),
     );

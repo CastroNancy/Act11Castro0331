@@ -12,6 +12,7 @@ class WelcomePage extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(16),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const Spacer(),
                 Image.asset(
@@ -19,20 +20,24 @@ class WelcomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 40),
                 const Text(
-                  "Explore your journey \nonly with us",
+                  "Oxxo a la vuelta de tu vida",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    fontSize: 26,
+                    fontSize: 28,
                     fontWeight: FontWeight.bold,
+                    color: Color(0xFFB71C1C), // Un tono de rojo más elegante
+                    fontFamily:
+                        'Raleway', // Fuente personalizada para elegancia
                   ),
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  "All your vacations destinations are here,\nenjoy your holiday",
+                  "Encuentra tus productos de la mejor calidad solo con nosotros",
                   textAlign: TextAlign.center,
                   style: TextStyle(
-                    color: Colors.black54,
-                    fontSize: 16,
+                    color: Color(0xFFD32F2F), // Rojo suave para el subtítulo
+                    fontSize: 18,
+                    fontFamily: 'Raleway', // Fuente personalizada
                   ),
                 ),
                 const Spacer(),
@@ -50,14 +55,25 @@ class WelcomePage extends StatelessWidget {
                         );
                       },
                       style: ElevatedButton.styleFrom(
-                        elevation: 0,
-                        shape: const StadiumBorder(),
+                        primary: Color(0xFFC62828), // Rojo oscuro y elegante
+                        elevation: 5,
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(30),
+                        ),
                         padding: const EdgeInsets.symmetric(
                           vertical: 15,
                           horizontal: 8.0,
                         ),
                       ),
-                      child: const Text("Get Started"),
+                      child: const Text(
+                        "Iniciar",
+                        style: TextStyle(
+                          color: Color(0xffffffff),
+                          fontSize: 16,
+                          fontFamily: 'Raleway', // Fuente personalizada
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                     ),
                   ),
                 )

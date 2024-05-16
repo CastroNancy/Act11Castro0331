@@ -10,11 +10,11 @@ class Distance extends StatelessWidget {
       children: [
         const Icon(
           Ionicons.locate_outline,
-          color: Colors.black54,
+          color: Color(0x8affffff),
           size: 14,
         ),
         const Text(
-          "Accra",
+          "Ubicacion",
           style: TextStyle(
             color: Colors.black54,
           ),
@@ -39,9 +39,9 @@ class Distance extends StatelessWidget {
         ),
         const SizedBox(width: 2),
         Text(
-          "Kumasi",
+          "Oxxo",
           style: TextStyle(
-            color: Theme.of(context).primaryColor,
+            color: Color(0xff730f07),
           ),
         )
       ],
